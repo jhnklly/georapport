@@ -1,0 +1,64 @@
+<!doctype html>
+<html> 
+<head>
+    <title>georapport</title>
+    <style>
+        html, body, div {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 700;
+        }
+        button {
+            color: rgba(0,0,255,0.9);
+            background-color: #99cc99;
+            border: 10px solid rgba(0,0,99,0.2);
+            border-radius: 50%;
+            width: 170px;
+            height: 170px;
+            margin: 5px;
+            font-size: 20px;
+            font-weight: 700;
+        }  
+        #title {
+
+        }
+        #subtitle {
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="title">
+        georapport
+    </div>
+
+    <div id="subtitle">
+        (GeoReapportion)
+    </div>
+
+  <form enctype="multipart/form-data" action="02_upload2fields.php" method="post">
+    <button name="custom_polygons" type="button" onclick="$('#uploaded_CUSTOM_file').trigger('click');">Upload<br/>CUSTOM polygons</button>
+    <button name="census_polygons" type="button" onclick="$('#uploaded_CENSUS_file').trigger('click');">Upload<br/>CENSUS polygons</button>
+  
+    <input type="hidden" name="MAX_FILE_SIZE" value=9000000" />
+    <input id="uploaded_CUSTOM_file" name="uploaded_FILES['CUSTOM']" type="file" style="display:none;" multiple />
+    <input id="uploaded_CENSUS_file" name="uploaded_FILES['CENSUS']" type="file" style="display:none;" multiple />
+    <br>
+    <input type="submit" value="Next" />
+  </form> 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+</script>
+
+</body> 
+</html>
+
+
